@@ -1,0 +1,11 @@
+export const LIGHT_THEME = 'LIGHT_THEME';
+export const DARK_THEME = 'DARK_THEME';
+export const PURPLE_THEME = 'PURPLE_THEME';
+export const BLUE_THEME = 'BLUE_THEME';
+export const TEAL_THEME = 'TEAL_THEME';
+export const DEEP_PURPLE_THEME = 'DEEP_PURPLE_THEME';
+export const GREY_THEME = 'GREY_THEME';
+export const BROWN_THEME = 'BROWN_THEME';
+export const BLUE_GREY_THEME = 'BLUE_GREY_THEME';
+
+export const VOLKSWOHNUNG_THEME_KEY = 'VOLKSWOHNUNG_THEME_KEY';
