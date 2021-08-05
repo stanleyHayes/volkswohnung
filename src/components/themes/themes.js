@@ -13,55 +13,64 @@ import {
 
 const lightTheme = createTheme({
     typography: {
-        fontFamily: 'Nunito'
+        fontFamily: "Quicksand, 'Work Sans', 'Nunito'"
+    },
+    palette: {
+        background: {
+            paper: '#ffffff',
+            default: '#E6E6E6'
+        }
+    },
+    shape: {
+        borderRadius: 16
     }
 });
 
 const darkTheme = createTheme({
     typography: {
-        fontFamily: 'Nunito'
+        fontFamily: "Quicksand,'Work Sans', 'Nunito'"
     }
 });
 
 const purpleTheme = createTheme({
     typography: {
-        fontFamily: 'Nunito'
+        fontFamily: "Quicksand,'Work Sans', 'Nunito'"
     }
 });
 
 const blueTheme = createTheme({
     typography: {
-        fontFamily: 'Nunito'
+        fontFamily: "Quicksand,'Work Sans', 'Nunito'"
     }
 });
 
 const tealTheme = createTheme({
     typography: {
-        fontFamily: 'Nunito'
+        fontFamily: "Quicksand,'Work Sans', 'Nunito'"
     }
 });
 
 const deepPurpleTheme = createTheme({
     typography: {
-        fontFamily: 'Nunito'
+        fontFamily: "Quicksand,'Work Sans', 'Nunito'"
     }
 });
 
 const blueGreyTheme = createTheme({
     typography: {
-        fontFamily: 'Nunito'
+        fontFamily: "Quicksand,'Work Sans', 'Nunito'"
     }
 });
 
 const greyTheme = createTheme({
     typography: {
-        fontFamily: 'Nunito'
+        fontFamily: "Quicksand,'Work Sans', 'Nunito'"
     }
 });
 
 const brownTheme = createTheme({
     typography: {
-        fontFamily: 'Nunito'
+        fontFamily: "Quicksand,'Work Sans', 'Nunito'"
     }
 });
 

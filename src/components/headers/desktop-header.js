@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import {Button, Grid, Menu, MenuItem, Toolbar, Typography} from "@material-ui/core";
+import {Button, Divider, Grid, Menu, MenuItem, Toolbar, Typography} from "@material-ui/core";
 import {Link} from "react-router-dom";
 import {makeStyles} from "@material-ui/styles";
+import {ExitToApp, Face, Favorite, KeyboardArrowDown} from "@material-ui/icons";
 
 const DesktopHeader = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -20,10 +21,13 @@ const DesktopHeader = () => {
     const useStyles = makeStyles(theme => {
         return {
             link: {
-                textDecoration: "none"
+                textDecoration: "none",
+                display: 'block',
+                width: '100%'
             },
             brand: {},
-            toolbar: {}
+            toolbar: {},
+            divider: {}
         }
     });
 
@@ -67,7 +71,7 @@ const DesktopHeader = () => {
                         </Link>
                     </Grid>
                     <Grid item={true}>
-                        <Link to="/" className={classes.link}>
+                        <Link to="/rooms" className={classes.link}>
                             <Button variant="text" size="large">
                                 Rooms
                             </Button>
@@ -75,21 +79,45 @@ const DesktopHeader = () => {
                     </Grid>
                 </Grid>
                 <Grid item={true} lg={2} container={true} justify="flex-end">
-                    <Button size="large" variant="outlined" onClick={handleMenuOpen}>
+                    <Button
+                        startIcon={<Face/>}
+                        size="large"
+                        variant="outlined"
+                        onClick={handleMenuOpen}
+                        endIcon={<KeyboardArrowDown/>}>
                         Stanley Hayford
                     </Button>
                     <Menu
-                        anchorOrigin={{vertical: "center", horizontal: "center"}}
+                        anchorOrigin={{vertical: "center", horizontal: "left"}}
                         anchorPosition={{left: 0, top: 0}}
-                        variant="selectedMenu"
+                        variant="menu"
                         elevation={1}
                         anchorEl={anchorEl}
                         open={menuOpen}
                         onClose={handleMenuClose}>
                         <MenuItem>
                             <Link to="/profile" className={classes.link}>
-
+                                <Button startIcon={<Face/>} fullWidth={true}>Profile</Button>
                             </Link>
+                            <Divider variant="fullWidth" className={classes.divider}/>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to="/profile" className={classes.link}>
+                                <Button startIcon={<Face/>} fullWidth={true}>Occupations</Button>
+                            </Link>
+                            <Divider variant="fullWidth" className={classes.divider}/>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to="/profile" className={classes.link}>
+                                <Button startIcon={<Favorite/>} fullWidth={true}>Favorites</Button>
+                            </Link>
+                            <Divider variant="fullWidth" className={classes.divider}/>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to="/auth/login" className={classes.link}>
+                                <Button startIcon={<ExitToApp/>} fullWidth={true}>Logout</Button>
+                            </Link>
+                            <Divider variant="fullWidth" className={classes.divider}/>
                         </MenuItem>
                     </Menu>
                 </Grid>

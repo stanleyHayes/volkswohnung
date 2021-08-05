@@ -6,7 +6,9 @@ const Layout = ({children}) => {
     const useStyles = makeStyles(theme => {
         return {
             content: {
-                paddingTop: 64
+                paddingTop: 50,
+                minHeight: '100vh',
+                backgroundColor: theme.palette.background.default
             }
         }
     });
